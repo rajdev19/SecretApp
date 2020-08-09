@@ -212,12 +212,37 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - Alamofire (5.2.2)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - FacebookCore (0.9.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FacebookLogin (0.9.0):
+    - FacebookCore (~> 0.9.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKLoginKit (~> 5.0)
+  - FacebookShare (0.9.0):
+    - FacebookCore (~> 0.9.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKShareKit (~> 5.0)
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.15.1):
+    - FBSDKLoginKit/Login (= 5.15.1)
+  - FBSDKLoginKit/Login (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKShareKit (5.15.1):
+    - FBSDKShareKit/Share (= 5.15.1)
+  - FBSDKShareKit/Share (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
   - Firebase/Auth (6.29.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.7.1)
@@ -226,6 +251,9 @@ PODS:
     - FirebaseAnalytics (= 6.7.0)
   - Firebase/CoreOnly (6.29.0):
     - FirebaseCore (= 6.9.2)
+  - Firebase/Database (6.29.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 6.4.0)
   - Firebase/Firestore (6.29.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 1.16.3)
@@ -255,6 +283,9 @@ PODS:
     - GoogleUtilities/Environment (~> 6.7)
     - GoogleUtilities/Logger (~> 6.7)
     - nanopb (~> 1.30905.0)
+  - FirebaseDatabase (6.4.0):
+    - FirebaseCore (~> 6.8)
+    - leveldb-library (~> 1.22)
   - FirebaseFirestore (1.16.3):
     - abseil/algorithm (= 0.20200225.0)
     - abseil/base (= 0.20200225.0)
@@ -330,6 +361,9 @@ PODS:
   - InputBarAccessoryView (4.3.3):
     - InputBarAccessoryView/Core (= 4.3.3)
   - InputBarAccessoryView/Core (4.3.3)
+  - Kingfisher (5.14.1):
+    - Kingfisher/Core (= 5.14.1)
+  - Kingfisher/Core (5.14.1)
   - leveldb-library (1.22)
   - MessageKit (3.1.0):
     - InputBarAccessoryView (~> 4.3.0)
@@ -341,21 +375,35 @@ PODS:
   - PromisesObjC (1.2.9)
 
 DEPENDENCIES:
+  - Alamofire
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
   - Firebase/Auth
   - Firebase/Core
+  - Firebase/Database
   - Firebase/Firestore
   - Firebase/Storage
+  - Kingfisher
   - MessageKit
 
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
     - BoringSSL-GRPC
+    - FacebookCore
+    - FacebookLogin
+    - FacebookShare
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
+    - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseInstallations
     - FirebaseStorage
@@ -366,6 +414,7 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - InputBarAccessoryView
+    - Kingfisher
     - leveldb-library
     - MessageKit
     - nanopb
@@ -373,12 +422,20 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
+  FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
+  FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
+  FacebookShare: 85968ad1b1606c4944fb154924e425fd29184ea5
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
+  FBSDKShareKit: 259737eab3cc807087374553abdf588b3096ba55
   Firebase: 57957c8d6eb3d8b80a560b1dc58be24724b89ff2
   FirebaseAnalytics: aa522dce9fd93002ba1554467d23ce7092323000
   FirebaseAuth: a818d73466d51db897d3bf3c0f3baa3dae7fd4c0
   FirebaseCore: 7930a1946517d94256d857f97371ed993b55f7bd
   FirebaseCoreDiagnostics: 7535fe695737f8c5b350584292a70b7f8ff0357b
+  FirebaseDatabase: 55e69fe802ccb438d9c6ee51eb32fd425d5409d3
   FirebaseFirestore: 5ea7b0878363f9ec66bdcee0c29ad875d1b511ac
   FirebaseInstallations: 3c520c951305cbf9ca54eb891ff9e6d1fd384881
   FirebaseStorage: 3ef81ca5fa7817f85451ca09d516a34d2c7542a7
@@ -389,11 +446,12 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   InputBarAccessoryView: 8e7fc09e9cba75e0fee5da13450e15c194806f69
+  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MessageKit: 3beb578737a5aa2bba25cc27c7b6d6faa09af5a7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
 
-PODFILE CHECKSUM: 08448ea30cf3c0a8f8ca6ba8091137a1b5d4548b
+PODFILE CHECKSUM: 6911fcfa3398d2735406809ffd4d7f375fe6cece
 
 COCOAPODS: 1.9.3

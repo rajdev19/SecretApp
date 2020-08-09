@@ -7,10 +7,19 @@ target 'SecretApp' do
 
   # Pods for SecretApp
   pod 'MessageKit'
+
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Firebase/Firestore'
+
+  pod 'Alamofire'
+  pod 'Kingfisher'
   
 
   target 'SecretAppTests' do
