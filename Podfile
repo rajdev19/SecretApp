@@ -6,6 +6,12 @@ target 'SecretApp' do
   use_frameworks!
 
   # Pods for SecretApp
+  pod 'MessageKit'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
+  
 
   target 'SecretAppTests' do
     inherit! :search_paths
